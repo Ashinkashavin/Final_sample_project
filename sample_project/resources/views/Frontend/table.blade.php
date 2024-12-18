@@ -378,6 +378,18 @@
         <h6 class="m-0 font-weight-bold text-primary">Vehicle Data</h6>
     </div>
     <div class="card-body">
+        <!-- Alert Messages -->
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
